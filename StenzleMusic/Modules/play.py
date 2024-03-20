@@ -39,7 +39,7 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 
 
 @app.on_message(
-    filters.command(["play", "vplay", "p"])
+    filters.command(["play", "p"])
     & filters.group
     & ~filters.forwarded
     & ~filters.via_bot
