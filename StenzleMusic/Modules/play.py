@@ -26,7 +26,7 @@ from StenzleMusic import (
     LOGGER,
     app,
     app2,
-    stenzledb,
+    Stenzledb,
     pytgcalls,
 )
 from StenzleMusic.Helpers.active import add_active_chat, is_active_chat, stream_on
