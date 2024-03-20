@@ -60,7 +60,7 @@ async def on_stream_end(pytgcalls, update: Update):
             chat_id=chat_id,
             text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",
         )
-                  await process.delete()
+    await process.delete()
         title = get[0]["title"]
         duration = get[0]["duration"]
         file_path = get[0]["file_path"]
