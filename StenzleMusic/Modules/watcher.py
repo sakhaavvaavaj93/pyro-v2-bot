@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls.types import AudioPiped, HighQualityAudio, Update
 
-from StenzleMusic import BOT_ID, BOT_USERNAME, app, app2, fallendb, pytgcalls
+from StenzleMusic import BOT_ID, BOT_USERNAME, app, app2, Stenzledb, pytgcalls
 from StenzleMusic.Helpers import _clear_, buttons, gen_thumb
 
 welcome = 20
@@ -55,17 +55,10 @@ async def on_stream_end(pytgcalls, update: Update):
             return await pytgcalls.leave_group_call(chat_id)
         except:
             return
- #   else:
-  #      process = await app.send_message(
-  #          chat_id=chat_id,
-   #         text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",
-  #      )
         title = get[0]["title"]
         duration = get[0]["duration"]
         file_path = get[0]["file_path"]
         videoid = get[0]["videoid"]
-        req_by = get[0]["req"]
-        user_id = get[0]["user_id"]
         get.pop(0)
 
         stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
@@ -78,12 +71,3 @@ async def on_stream_end(pytgcalls, update: Update):
         except:
             await _clear_(chat_id)
             return await pytgcalls.leave_group_call(chat_id)
-
- #       img = await gen_thumb(videoid, user_id)
-#        await process.delete()
-#        await app.send_photo(
-#            chat_id=chat_id,
-#            photo=img,
-#            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
-#            reply_markup=buttons,
-#
