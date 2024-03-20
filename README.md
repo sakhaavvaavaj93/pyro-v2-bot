@@ -33,12 +33,9 @@ This is a light weight source, as a result it gives faster and better performanc
 - Get All The Necessary Variables And Deploy To Heroku.
 - Some Mandatory Variables Are listed [Here](#Variables).
 - Fork & Star this repo.
--
-- 
-
 ------
 
-[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sakhaavvaavaj93/Vcs1)
+[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)]([https://github.com/sakhaavvaavaj93/StenzleMusic/tree/Master])
 ## 🚀 Deploy Locally
 
 `Tutorial coming soon.`
