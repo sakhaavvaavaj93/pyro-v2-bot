@@ -1,13 +1,13 @@
 <h1 align="center">
-  <b>✨ †hê Hêllẞø† - ᴍᴜsɪᴄ 🎶</b>
+  <b>🌹Stenzle Music 2.O💖</b>
 </h1>
 
 <p align="center">
-  <img src="https://telegra.ph/file/f0e7b710cb3e448ad4601.jpg" alt="KAALIKA" width=500 height=300>
+  <img src="https://telegra.ph/file/f0e7b710cb3e448ad4601.jpg" alt="Stenzle" width=500 height=300>
 </p>
 
 <h6 align="center">
-  <b>⚡ KAALIKA ⚡</b>
+  <b>⚡ STENZLE ⚡</b>
 </h6>
 
 <h3 align="center">
@@ -26,20 +26,19 @@ This is a light weight source, as a result it gives faster and better performanc
   - Interactive UI.
   - Smooth and fast.
   - Less Bugs.
-  - Global Leaderboard support.
+  - Keep Clean and Calm
 
 ------
 ## 🚀 Deploy To Heroku
 - Get All The Necessary Variables And Deploy To Heroku.
 - Some Mandatory Variables Are listed [Here](#Variables).
 - Fork & Star this repo.
-- Copy your fork link and paste it [here](https://docs.hellbot.tech/hellbot-userbot/deploy-to-heroku#generate-deploy-url)
-- You'll get the deploy url, open it and you are good to go.
+-
+- 
 
 ------
 
-<p align="center"><a href="https://heroku.com/deploy"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-pink?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-
+[![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sakhaavvaavaj93/Vcs1)
 ## 🚀 Deploy Locally
 
 `Tutorial coming soon.`
@@ -51,7 +50,7 @@ This is a light weight source, as a result it gives faster and better performanc
 - `API_ID`  =  Get this value from my.telegram.org
 - `BOT_TOKEN`  =  Make A Bot From [@BotFather](https://t.me/botfather) and paste it's token.
 - `DATABASE_URL`  =  A mongodb database url.
-- `HELLBOT_SESSION`  =  Paste a pyrogram session string
+- `Stenzle_SESSION`  =  Paste a pyrogram session string
 - `LOGGER_ID`  =  A telegram group id to log bot dump.
 - `OWNER_ID` = Your user id. You can add multiple user id by seperating each id with a space. Do not fill sudo users id here.
 
