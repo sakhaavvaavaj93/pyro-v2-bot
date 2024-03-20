@@ -14,7 +14,7 @@ StartTime = time.time()
 logging.basicConfig(
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt="%d-%b-%y %H:%M:%S",
-    handlers=[logging.FileHandler("stenzlelogs.txt"), logging.StreamHandler()],
+    handlers=[logging.FileHandler("Stenzlelogs.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
@@ -46,7 +46,7 @@ async def stenzle_startup():
     LOGGER.info(
         "\n\n\u250f\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2513\n\u2523\u2605\x20\x46\x41\x4c\x4c\x45\x4e\x20\x4d\x55\x53\x49\x43\x20\x42\x4f\x54\x20\u2605\n\u2517\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u251b"
     )
-    global BOT_ID, BOT_NAME, BOT_USERNAME, BOT_MENTION, fallendb
+    global BOT_ID, BOT_NAME, BOT_USERNAME, BOT_MENTION, Stenzledb
     global ASS_ID, ASS_NAME, ASS_USERNAME, ASS_MENTION, SUDOERS
 
     await app.start()
@@ -83,7 +83,7 @@ async def stenzle_startup():
     elif int(ANON) not in config.SUDO_USERS:
         SUDOERS.add(int(ANON))
 
-    stenzledb = {}
+    Stenzledb = {}
     LOGGER.info(
         "[•] \x4c\x6f\x63\x61\x6c\x20\x44\x61\x74\x61\x62\x61\x73\x65\x20\x49\x6e\x69\x74\x69\x61\x6c\x69\x7a\x65\x64\x2e\x2e\x2e"
     )
@@ -93,4 +93,4 @@ async def stenzle_startup():
     )
 
 
-asyncio.get_event_loop().run_until_complete(stenzle_startup())
+asyncio.get_event_loop().run_until_complete(Stenzle_startup())
