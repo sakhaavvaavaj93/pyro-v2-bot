@@ -11,7 +11,7 @@ from StenzleMusic import (
     BOT_USERNAME,
     LOGGER,
     app,
-    stenzledb,
+    Stenzledb,
     pytgcalls,
 )
 from StenzleMusic.Helpers import (
@@ -109,8 +109,6 @@ async def admin_cbs(_, query: CallbackQuery):
             duration = get[0]["duration"]
             videoid = get[0]["videoid"]
             file_path = get[0]["file_path"]
-            req_by = get[0]["req"]
-            user_id = get[0]["user_id"]
             get.pop(0)
 
             stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
