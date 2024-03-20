@@ -46,10 +46,10 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 )
 async def play(_, message: Message):
     Stenzle = await message.reply_text("» ᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
-              await message.delete()
+    try:
+        await message.delete()          
     except:
         pass
-
     try:
         try:
             get = await app.get_chat_member(message.chat.id, ASS_ID)
