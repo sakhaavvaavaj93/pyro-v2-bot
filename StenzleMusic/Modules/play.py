@@ -99,9 +99,6 @@ async def play(_, message: Message):
         try:
             await app2.join_chat(invitelink)
             await asyncio.sleep(2)
-            await Stenzle.edit_text(
-                f"{ASS_NAME} ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ,\n\nsᴛᴀʀᴛɪɴɢ sᴛʀᴇᴀᴍ..."
-            )
         except UserAlreadyParticipant:
             pass
         except Exception as ex:
