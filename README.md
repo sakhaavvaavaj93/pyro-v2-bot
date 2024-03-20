@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://telegra.ph/file/f0e7b710cb3e448ad4601.jpg" alt="Stenzle" width=500 height=300>
+  <img src="https://telegra.ph/file/f0e7b710cb3e448ad4601.jpg" alt="Stenzle" >
 </p>
 
 <h6 align="center">
