@@ -47,7 +47,6 @@ async def swr_handler(_, chat_id: int):
 @pytgcalls.on_stream_end()
 async def on_stream_end(pytgcalls, update: Update):
     chat_id = update.chat_id
-
     get = Stenzledb.get(chat_id)
     if not get:
         try:
@@ -58,9 +57,7 @@ async def on_stream_end(pytgcalls, update: Update):
     else:
         process = await app.send_message(
             chat_id=chat_id,
-            text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",
-        )
-    await process.delete()
+            text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",) 
         title = get[0]["title"]
         duration = get[0]["duration"]
         file_path = get[0]["file_path"]
