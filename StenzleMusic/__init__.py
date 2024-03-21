@@ -15,7 +15,7 @@ StartTime = time.time()
 logging.basicConfig(
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt="%d-%b-%y %H:%M:%S",
-    handlers=[logging.FileHandler("fallenlogs.txt"), logging.StreamHandler()],
+    handlers=[logging.FileHandler("Stenzlelogs.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
@@ -84,7 +84,7 @@ async def Stenzle_startup():
     elif int(ANON) not in config.SUDO_USERS:
         SUDOERS.add(int(ANON))
 
-    fallendb = {}
+    Stenzledb = {}
     LOGGER.info(
         "[•] \x4c\x6f\x63\x61\x6c\x20\x44\x61\x74\x61\x62\x61\x73\x65\x20\x49\x6e\x69\x74\x69\x61\x6c\x69\x7a\x65\x64\x2e\x2e\x2e"
     )
