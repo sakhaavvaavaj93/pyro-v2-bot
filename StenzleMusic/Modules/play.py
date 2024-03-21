@@ -39,7 +39,7 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 
 
 @app.on_message(
-    filters.command(["play", "p"])
+    filters.command(["play", "vplay", "p"])
     & filters.group
     & ~filters.forwarded
     & ~filters.via_bot
@@ -47,9 +47,10 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 async def play(_, message: Message):
     Stenzle = await message.reply_text("» ᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     try:
-        await Stenzle.delete()          
+        await message.delete()
     except:
         pass
+
     try:
         try:
             get = await app.get_chat_member(message.chat.id, ASS_ID)
@@ -98,6 +99,9 @@ async def play(_, message: Message):
         try:
             await app2.join_chat(invitelink)
             await asyncio.sleep(2)
+            await Stenzle.edit_text(
+                f"{ASS_NAME} ᴊᴏɪɴᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ,\n\nsᴛᴀʀᴛɪɴɢ sᴛʀᴇᴀᴍ..."
+            )
         except UserAlreadyParticipant:
             pass
         except Exception as ex:
@@ -154,6 +158,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await Stenzle.edit_text("» ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴘʟᴀʏ ʙᴀʙʏ ?")
+        await Stenzle.edit_text("🔎")
         query = message.text.split(None, 1)[1]
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -191,6 +196,13 @@ async def play(_, message: Message):
             ruser,
             message.from_user.id,
         )
+        position = len(Stenzledb.get(message.chat.id))
+        qimg = await gen_qthumb(videoid, message.from_user.id)
+        await message.reply_photo(
+            photo=qimg,
+            caption=f"**➻ ᴀᴅᴅᴇᴅ ᴛᴏ ᴏ̨ᴜᴇᴜᴇ ᴀᴛ {position}**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
+            reply_markup=buttons,
+        )
     else:
         stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
         try:
@@ -212,6 +224,14 @@ async def play(_, message: Message):
             return await Stenzle.edit_text(
                 f"» {BOT_NAME} ᴀssɪsᴛᴀɴᴛ ɪs ᴍᴜᴛᴇᴅ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ,\n\nᴘʟᴇᴀsᴇ ᴜɴᴍᴜᴛᴇ {ASS_MENTION} ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴀɴᴅ ᴛʀʏ ᴘʟᴀʏɪɴɢ ᴀɢᴀɪɴ."
             )
+
+        imgt = await gen_thumb(videoid, message.from_user.id)
         await stream_on(message.chat.id)
         await add_active_chat(message.chat.id)
-        
+        await message.reply_photo(
+            photo=imgt,
+            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
+            reply_markup=buttons,
+        )
+
+    return await Stenzle.delete()
