@@ -39,7 +39,7 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 
 
 @app.on_message(
-    filters.command(["play", "p"])
+    filters.command(["play", "vplay", "p"])
     & filters.group
     & ~filters.forwarded
     & ~filters.via_bot
@@ -47,7 +47,7 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 async def play(_, message: Message):
     Stenzle = await message.reply_text("» ᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     try:
-        await Stenzle.delete()
+        await message.delete()
     except:
         pass
 
@@ -197,12 +197,12 @@ async def play(_, message: Message):
             message.from_user.id,
         )
         position = len(Stenzledb.get(message.chat.id))
-#        qimg = await gen_qthumb(videoid, message.from_user.id)
- #       await message.reply_photo(
-  #          photo=qimg,
-   #         caption=f"**➻ ᴀᴅᴅᴇᴅ ᴛᴏ ᴏ̨ᴜᴇᴜᴇ ᴀᴛ {position}**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
-    #        reply_markup=buttons,
-     #   )
+        qimg = await gen_qthumb(videoid, message.from_user.id)
+        await message.reply_photo(
+            photo=qimg,
+            caption=f"**➻ ᴀᴅᴅᴇᴅ ᴛᴏ ᴏ̨ᴜᴇᴜᴇ ᴀᴛ {position}**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
+            reply_markup=buttons,
+        )
     else:
         stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
         try:
@@ -231,3 +231,4 @@ async def play(_, message: Message):
         )
 
     return await Stenzle.delete()
+
