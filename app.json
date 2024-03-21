@@ -2,7 +2,6 @@
     "name": "Stenzle",
     "description": "A VC Player Bot for telegram videochats, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://graph.org/file/26fb6a3ccf7f40e28bd61.jpg",
-    "repository": "https://github.com/sakhaavvaavaj93/StenzleMusic",
     "keywords": [
     "python3",
     "telegram",
