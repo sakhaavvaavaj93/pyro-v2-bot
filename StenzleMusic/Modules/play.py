@@ -1,5 +1,4 @@
 
-
 import asyncio
 import os
 
@@ -198,12 +197,13 @@ async def play(_, message: Message):
             message.from_user.id,
         )
         position = len(Stenzledb.get(message.chat.id))
-    #    qimg = await gen_qthumb(videoid, message.from_user.id)
-    #    await message.reply_photo(
-    #        photo=qimg,
-    #        caption=f"**➻ ᴀᴅᴅᴇᴅ ᴛᴏ ᴏ̨ᴜᴇᴜᴇ ᴀᴛ {position}**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
-    #        reply_markup=buttons,
-    #    )
+        qimg = await gen_qthumb(videoid, message.from_user.id)
+        await message.reply_photo(
+            photo=qimg,
+            caption=f"**➻ ᴀᴅᴅᴇᴅ ᴛᴏ ᴏ̨ᴜᴇᴜᴇ ᴀᴛ {position}**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
+            reply_markup=buttons,
+        )
+        await message.delete()
     else:
         stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
         try:
@@ -222,13 +222,8 @@ async def play(_, message: Message):
                 f"» {BOT_NAME} ᴀssɪsᴛᴀɴᴛ ɪs ᴍᴜᴛᴇᴅ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ,\n\nᴘʟᴇᴀsᴇ ᴜɴᴍᴜᴛᴇ {ASS_MENTION} ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ ᴀɴᴅ ᴛʀʏ ᴘʟᴀʏɪɴɢ ᴀɢᴀɪɴ."
             )
 
-    #    imgt = await gen_thumb(videoid, message.from_user.id)
+        imgt = await gen_thumb(videoid, message.from_user.id)
         await stream_on(message.chat.id)
         await add_active_chat(message.chat.id)
-    #    await message.reply_photo(
-    #        photo=imgt,
-    #        caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {ruser}",
-    #        reply_markup=buttons,
-    #    )
-
+        
     return await Stenzle.delete()
