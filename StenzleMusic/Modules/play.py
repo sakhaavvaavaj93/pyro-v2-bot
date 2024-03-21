@@ -159,7 +159,7 @@ async def play(_, message: Message):
         if len(message.command) < 2:
             return await Stenzle.edit_text("» ᴡʜᴀᴛ ᴅᴏ ʏᴏᴜ ᴡᴀɴɴᴀ ᴘʟᴀʏ ʙᴀʙʏ ?")
         await Stenzle.edit_text("🔎")
-        await stenzle.delete()
+        await Stenzle.delete()
         query = message.text.split(None, 1)[1]
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
