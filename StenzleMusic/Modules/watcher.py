@@ -1,4 +1,3 @@
-
 from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls.types import AudioPiped, HighQualityAudio, Update
@@ -20,7 +19,7 @@ async def welcome(_, message: Message):
         pass
 
 
-@app.on_message(filters.left_chat_member)
+@app.on_message(filters.left_chat_member & filters.self)
 async def ub_leave(_, message: Message):
     if message.left_chat_member.id == BOT_ID:
         try:
@@ -35,7 +34,6 @@ async def ub_leave(_, message: Message):
 
 
 @pytgcalls.on_left()
-@pytgcalls.on_kicked()
 @pytgcalls.on_closed_voice_chat()
 async def swr_handler(_, chat_id: int):
     try:
@@ -45,7 +43,7 @@ async def swr_handler(_, chat_id: int):
 
 
 @pytgcalls.on_stream_end()
-async def on_stream_end(pytgcalls, update: Update):
+async def on_stream_end(pytgcalls, update):
     chat_id = update.chat_id
     get = Stenzledb.get(chat_id)
     if not get:
@@ -54,10 +52,7 @@ async def on_stream_end(pytgcalls, update: Update):
             return await pytgcalls.leave_group_call(chat_id)
         except:
             return
-#    else:
- #       process = await app.send_message(
-#            chat_id=chat_id,
-#            text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",) 
+    else:
         title = get[0]["title"]
         duration = get[0]["duration"]
         file_path = get[0]["file_path"]
@@ -76,9 +71,3 @@ async def on_stream_end(pytgcalls, update: Update):
         except:
             await _clear_(chat_id)
             return await pytgcalls.leave_group_call(chat_id)
-
-
-
-        
-        
-
