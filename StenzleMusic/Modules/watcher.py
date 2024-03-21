@@ -19,7 +19,7 @@ async def welcome(_, message: Message):
         pass
 
 
-@app.on_message(filters.left_chat_member & filters.self)
+@app.on_message(filters.left_chat_member)
 async def ub_leave(_, message: Message):
     if message.left_chat_member.id == BOT_ID:
         try:
