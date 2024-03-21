@@ -48,7 +48,7 @@ from StenzleMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
 async def play(_, message: Message):
     Stenzle = await message.reply_text("» ᴘʀᴏᴄᴇssɪɴɢ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     try:
-        await Stenzle.delete()
+        await message.delete()
     except:
         pass
 
