@@ -78,12 +78,5 @@ async def on_stream_end(pytgcalls, update: Update):
         except:
             await _clear_(chat_id)
             return await pytgcalls.leave_group_call(chat_id)
-
-        img = await gen_thumb(videoid, user_id)
         await process.delete()
-        await app.send_photo(
-            chat_id=chat_id,
-            photo=img,
-            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
-            reply_markup=buttons,
-        )
+        
