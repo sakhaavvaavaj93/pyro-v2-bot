@@ -4,13 +4,16 @@ from StenzleMusic import BOT_NAME
 PM_START_TEXT = """
 ʜᴇʏ {0}, 🥀
 ๏ ᴛʜɪs ɪs** {1} !
-💖 i am official Music Bot of @Mallu_Street .💖
+💖 i am official Music Bot of @Mallus_Street .💖
 🌹 for any queries of this bot -> @BE_HALF_OFF_KRISHNA🌹
 
 ➻ ᴀ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ
 »  KEEP THE CHAT CLEAN AND NEET
 »  LAGLESS PLAYER EVER
 »  INSTANT PLUGINS
+
+🎭 any one wish to add me to UR Group,
+    then , Contact to @BE_HALF_OFF_KRISHNA 🎀
 """
 
 START_TEXT = """
@@ -24,6 +27,8 @@ START_TEXT = """
 »  LAGLESS PLAYER EVER
 »  INSTANT PLUGINS
 
+🎭 any one wish to add me to UR Group,
+    then , Contact to @BE_HALF_OFF_KRISHNA 🎀
 ──────────────────
 ➻ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴀʙᴏᴜᴛ ᴍᴇ ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ᴀsᴋ sᴏᴍᴇᴛʜɪɴɢ ʏᴏᴜ ᴄᴀɴ ᴊᴏɪɴ ᴍʏ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ]({3}).
 """
