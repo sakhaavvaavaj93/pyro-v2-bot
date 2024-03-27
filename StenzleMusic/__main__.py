@@ -34,26 +34,7 @@ async def Stenzle_startup():
         os.mkdir("cache")
     LOGGER.info("[•] Directories Refreshed.")
 
-    try:
-        await app.send_message(
-            SUNAME,
-            f"✯ STENZLE MUSIC ✯\n\n𖢵 ɪᴅ : `{BOT_ID}`\n𖢵 ɴᴀᴍᴇ : {BOT_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{BOT_USERNAME}",
-        )
-    except:
-        LOGGER.error(
-            f"{BOT_NAME} failed to send message at @{SUNAME}, please go & check."
-        )
-
-    try:
-        await app2.send_message(
-            SUNAME,
-            f"✯ stenzle ᴀss ✯\n\n𖢵 ɪᴅ : `{ASS_ID}`\n𖢵 ɴᴀᴍᴇ : {ASS_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{ASS_USERNAME}",
-        )
-    except:
-        LOGGER.error(
-            f"{ASS_NAME} failed to send message at @{SUNAME}, please go & check."
-        )
-
+   
     await app2.send_message(BOT_USERNAME, "/start")
 
     LOGGER.info(f"[•] Bot Started As {BOT_NAME}.")
