@@ -5,7 +5,7 @@ PM_START_TEXT = """
 ʜᴇʏ {0}, 🥀
 ๏ ᴛʜɪs ɪs** {1} !
 💖 i am official Music Bot of @Mallus_Street .💖
-🌹 for any queries of this bot -> @BE_HALF_OFF_KRISHNA🌹
+🌹 for any queries of this bot -> @BE_HALF_OF_KRISHNA🌹
 
 ➻ ᴀ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ
 »  KEEP THE CHAT CLEAN AND NEET
@@ -13,14 +13,14 @@ PM_START_TEXT = """
 »  INSTANT PLUGINS
 
 🎭 any one wish to add me to UR Group,
-    then , Contact to @BE_HALF_OFF_KRISHNA 🎀
+    then , Contact to @BE_HALF_OF_KRISHNA 🎀
 """
 
 START_TEXT = """
 **ʜᴇʏ** {0}, 🥀
   {1} ᴄᴀɴ ɴᴏᴡ ᴩʟᴀʏ sᴏɴɢs ɪɴ {2}.
   💖 i am official Music Bot of @Mallu_Street .💖
-🌹 for any queries of this bot -> @BE_HALF_OFF_KRISHNA🌹
+🌹 for any queries of this bot -> @BE_HALF_OF_KRISHNA🌹
 
 ➻ ᴀ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ
 »  KEEP THE CHAT CLEAN AND NEET
@@ -28,7 +28,7 @@ START_TEXT = """
 »  INSTANT PLUGINS
 
 🎭 any one wish to add me to UR Group,
-    then , Contact to @BE_HALF_OFF_KRISHNA 🎀
+    then , Contact to @BE_HALF_OF_KRISHNA 🎀
 ──────────────────
 ➻ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴀʙᴏᴜᴛ ᴍᴇ ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ᴀsᴋ sᴏᴍᴇᴛʜɪɴɢ ʏᴏᴜ ᴄᴀɴ ᴊᴏɪɴ ᴍʏ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ]({3}).
 """
