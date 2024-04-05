@@ -60,6 +60,15 @@ async def Stenzle_st(_, message: Message):
                     parse_mode=ParseMode.MARKDOWN,
                     reply_markup=key,
                 )
+        else:
+            await message.reply_photo(
+                photo=config.START_IMG,
+                caption=PM_START_TEXT.format(
+                    message.from_user.first_name,
+                    BOT_MENTION,
+                ),
+                reply_markup=InlineKeyboardMarkup(pm_buttons),
+            )
     else:
         await message.reply_photo(
             photo=config.START_IMG,
