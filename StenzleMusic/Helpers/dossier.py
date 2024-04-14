@@ -4,8 +4,8 @@ from StenzleMusic import BOT_NAME
 PM_START_TEXT = """
 ʜᴇʏ {0}, 🥀
 ๏ ᴛʜɪs ɪs** {1} !
-💖 i am official Music Bot of @Mallus_Street .💖
-🌹 for any queries of this bot -> @BE_HALF_OF_KRISHNA🌹
+💖 i am official Music Bot of @pyro_support_v2 .💖
+🌹 for any queries of this bot -> @Abhi34200🌹
 
 ➻ ᴀ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ
 »  KEEP THE CHAT CLEAN AND NEET
@@ -13,14 +13,14 @@ PM_START_TEXT = """
 »  INSTANT PLUGINS
 
 🎭 any one wish to add me to UR Group,
-    then , Contact to @BE_HALF_OF_KRISHNA 🎀
+    then , Contact to @Abhi34200 🎀
 """
 
 START_TEXT = """
 **ʜᴇʏ** {0}, 🥀
   {1} ᴄᴀɴ ɴᴏᴡ ᴩʟᴀʏ sᴏɴɢs ɪɴ {2}.
-  💖 i am official Music Bot of @Mallu_Street .💖
-🌹 for any queries of this bot -> @BE_HALF_OF_KRISHNA🌹
+  💖 i am official Music Bot of @pyro_support_v2 .💖
+🌹 for any queries of this bot -> @Abhi34200🌹
 
 ➻ ᴀ ғᴀsᴛ ᴀɴᴅ ᴘᴏᴡᴇʀғᴜʟ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ
 »  KEEP THE CHAT CLEAN AND NEET
@@ -28,7 +28,7 @@ START_TEXT = """
 »  INSTANT PLUGINS
 
 🎭 any one wish to add me to UR Group,
-    then , Contact to @BE_HALF_OF_KRISHNA 🎀
+    then , Contact to @Abhi34200 🎀
 ──────────────────
 ➻ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴘ ᴀʙᴏᴜᴛ ᴍᴇ ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ᴀsᴋ sᴏᴍᴇᴛʜɪɴɢ ʏᴏᴜ ᴄᴀɴ ᴊᴏɪɴ ᴍʏ [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ]({3}).
 """
