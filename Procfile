@@ -1,1 +1,1 @@
-worker: bash stenzle
+worker: bash Stenzle
