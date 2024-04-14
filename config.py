@@ -9,19 +9,19 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
 BOT_TOKEN = getenv("BOT_TOKEN", None)
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "3000"))
+DURATION_LIMIT = int(getenv("DURATION_LIMIT", "150000"))
 
 OWNER_ID = int(getenv("OWNER_ID"))
 
-PING_IMG = getenv("PING_IMG" , "https://telegra.ph/file/89fd3e2bf5aaaef0b1373.jpg")
-START_IMG = getenv("START_IMG", "https://telegra.ph/file/fe24e1a62b4e14bf8f4eb.jpg")
+PING_IMG = getenv("PING_IMG" , "https://te.legra.ph/file/9d8c207b8ad08682e638f.jpg")
+START_IMG = getenv("START_IMG", "https://te.legra.ph/file/9d8c207b8ad08682e638f.jpg")
 
 SESSION = getenv("SESSION", None)
 
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Mallus_Street")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/pyro_support_v2")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Techno_Bullets")
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "7089056796 7044382449").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "7089056796 6627630052 7044382449").split()))
 
 
 FAILED = "https://te.legra.ph/file/4c896584b592593c00aa8.jpg"
